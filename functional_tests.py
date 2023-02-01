@@ -18,7 +18,7 @@ class HomePageTest(unittest.TestCase):
 
         # She notices the page title and header mention to-do lists
         self.assertIn("To-Do", self.browser.title)
-        header = self.browser.find_element(By.ID, "h1")
+        header = self.browser.find_element(By.TAG_NAME, "h1")
         self.assertIn("To-Do", header.text)
 
         # She is invited to enter a to-do item straight away
