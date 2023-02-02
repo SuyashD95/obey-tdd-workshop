@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 
-class HomePageTest(unittest.TestCase):
+class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -13,7 +13,7 @@ class HomePageTest(unittest.TestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_home_page(self):
+    def test_can_add_see_and_retrieve_todo_items(self):
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
         self.browser.get('http://localhost:8000')
