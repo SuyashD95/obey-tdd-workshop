@@ -5,7 +5,8 @@
 <body>
   <h1>To-Do lists</h1>
   <form method="POST">
-    <input id="id_new_item" placeholder="Enter a to-do item" type="text" />
+    {% csrf_token %}
+    <input id="id_new_item" name="item_text" placeholder="Enter a to-do item" type="text" />
   </form>
 </body>
 </html>
