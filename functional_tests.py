@@ -40,9 +40,9 @@ class NewVisitorTest(unittest.TestCase):
         time.sleep(1)
 
         table = self.browser.find_element(By.ID, value="id_list_table")
-        rows = table.find_elements(By.ID, "tr")
-        self.assertTrue(
-            self.assertIn("1: Buy peacock feathers", [row.text for row in rows]),
+        rows = table.find_elements(By.TAG_NAME, "tr")
+        self.assertIn(
+            "1: Buy peacock feathers", [row.text for row in rows],
             "New to-do item did not appear in table"
         )
 
