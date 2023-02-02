@@ -42,7 +42,7 @@ class HomePageTest(unittest.TestCase):
         table = self.browser.find_element(By.ID, value="id_list_table")
         rows = table.find_elements(By.ID, "tr")
         self.assertTrue(
-            any(row.text == "1: Buy peacock feathers" for row in rows),
+            self.assertIn("1: Buy peacock feathers", [row.text for row in rows]),
             "New to-do item did not appear in table"
         )
 
